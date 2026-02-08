@@ -1,6 +1,7 @@
-# 📁 inha-rby1-dataset
-
-<p align="center">
+<div align="center">
+  <img src="https://github.com/inha-united-athome/.github/raw/main/profile/inha_logo.png" width="110" /><br/>
+  <h1>📁 inha-rby1-dataset</h1>
+  <span><b>Inha-United real-world RB-Y1 humanoid demonstration dataset for diverse manipulation tasks.</span><br/><br/>
   <a href="https://inha-united.github.io/Home2026/">
     <img src="https://img.shields.io/badge/Website-INHA--UNITED-black.svg" alt="Website">
   </a>
@@ -13,17 +14,11 @@
   <a href="https://huggingface.co/inha-united-athome">
     <img src="https://img.shields.io/badge/🤗-HuggingFace-yellow.svg" alt="Hugging Face">
   </a>
-  <a href="https://www.rainbow-robotics.com">
-    <img src="https://img.shields.io/badge/RainbowRobotics-Official-6f42c1.svg">
-  </a>
-</p>
+</div>
 
-Inha-United real-world RB-Y1 humanoid demonstration dataset for diverse manipulation tasks.
 <p align="center">
   <img src="assets/thumbnail.png" width="90%" style="display:block; margin:0 auto;"/>
 </p>
-
----
 
 ## Dataset Overview
 The **INHA-RBY1 Dataset** is a real-world humanoid manipulation dataset collected with the Rainbow Robotics RB-Y1 platform, covering a diverse set of manipulation tasks.
