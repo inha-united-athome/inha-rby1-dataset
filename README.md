@@ -17,7 +17,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/thumbnail.png" width="90%" style="display:block; margin:0 auto;"/>
+  <img src="assets/thumbnail.png" width="100%" style="display:block; margin:0 auto;"/>
 </p>
 
 ## Dataset Overview
