@@ -28,12 +28,24 @@ Inha-United real-world RB-Y1 humanoid demonstration dataset for diverse manipula
 ## Dataset Overview
 The **INHA-RBY1 Dataset** is a real-world humanoid manipulation dataset collected with the Rainbow Robotics RB-Y1 platform, covering a diverse set of manipulation tasks.
 
-<div style="width:90%; margin:0 auto; display:flex; flex-wrap:wrap; gap:6px;">
-  <img src="assets/pick_basket.gif" style="width:calc(50% - 3px); display:block;"/>
-  <img src="assets/pick_banana.gif" style="width:calc(50% - 3px); display:block;"/>
-  <img src="assets/pour_sprite.gif" style="width:calc(50% - 3px); display:block;"/>
-  <img src="assets/open_washer.gif" style="width:calc(50% - 3px); display:block;"/>
-</div>
+<table align="center" width="90%">
+  <tr>
+    <td align="center">
+      <img src="assets/pick_basket.gif" width="100%">
+    </td>
+    <td align="center">
+      <img src="assets/pick_banana.gif" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/pour_sprite.gif" width="100%">
+    </td>
+    <td align="center">
+      <img src="assets/open_washer.gif" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## File Structure
 ```
