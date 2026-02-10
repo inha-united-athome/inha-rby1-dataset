@@ -1,0 +1,10 @@
+# Toys — Category Definition
+category: toys
+display_name: "Toys"
+predefined_location: "bookshelf / living room"
+rulebook_mandatory: false
+ycb_coverage: "6/8 have YCB models or close matches"
+notes: "Rubik's cube must be in solved state per rulebook."
+competition_history:
+  2023: [rubiks_cube, tennis_ball, soccer_ball, baseball, dice]
+  2024: [rubiks_cube, tennis_ball, soccer_ball, baseball, dice]

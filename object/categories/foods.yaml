@@ -1,0 +1,10 @@
+# Foods & Condiments — Category Definition
+category: foods
+display_name: "Foods & Condiments"
+predefined_location: "pantry / cabinet"
+rulebook_mandatory: false
+ycb_coverage: "8/16 have YCB models or close matches"
+competition_history:
+  2023: [tuna_can, mustard, spam, tomato_soup, coffee_grounds, sugar, jello]
+  2024: [mayonnaise]
+  2025: [tuna_can, ketchup, mayonnaise, oats, broth, corn_flour]

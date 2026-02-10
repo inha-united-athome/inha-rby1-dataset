@@ -1,0 +1,74 @@
+# =============================================================================
+#  KITchen Dataset ↔ INHA-RBY1 Taxonomy Mapping
+#  Maps KITchen 111 kitchen objects to our taxonomy IDs.
+#
+#  KITchen: 111 objects in diverse kitchen locations (shelves, sinks,
+#  dishwashers, ovens, refrigerators, microwaves).
+#  Captured from humanoid egocentric perspective — most relevant to RB-Y1.
+#  Ref: https://abdelrahmanyounes.github.io/KITchen/
+#  Data: https://drive.google.com/drive/folders/1K38tgvQN_yl9MOdF1MlKL9oJVHQyFkyC
+# =============================================================================
+
+source: kitchen
+cite_key: [younes2024kitchen]
+
+# NOTE: KITchen does not publish a public object-ID list with stable IDs.
+# Mapping is based on object category/name overlap with our taxonomy.
+# When the dataset is downloaded, exact IDs should be verified.
+
+mappings:
+
+  # ── Tableware / Cutlery ─────────────────────────────────────────────────
+  kitchen_bowl:     { taxonomy_id: 1,  match_type: exact, kitchen_location: [shelf, dishwasher] }
+  kitchen_plate:    { taxonomy_id: 2,  match_type: exact, kitchen_location: [shelf, dishwasher] }
+  kitchen_cup:      { taxonomy_id: 3,  match_type: exact, kitchen_location: [shelf, dishwasher] }
+  kitchen_fork:     { taxonomy_id: 4,  match_type: exact, kitchen_location: [dishwasher, drawer] }
+  kitchen_knife:    { taxonomy_id: 5,  match_type: exact, kitchen_location: [dishwasher, drawer] }
+  kitchen_spoon:    { taxonomy_id: 6,  match_type: exact, kitchen_location: [dishwasher, drawer] }
+  kitchen_glass:    { taxonomy_id: 8,  match_type: similar, kitchen_location: [shelf] }
+
+  # ── Bottles & Drinks ────────────────────────────────────────────────────
+  kitchen_bottle:   { taxonomy_id: 96, match_type: similar, kitchen_location: [shelf, refrigerator] }
+  kitchen_milk:     { taxonomy_id: 12, match_type: similar, kitchen_location: [refrigerator] }
+  kitchen_juice:    { taxonomy_id: 13, match_type: similar, kitchen_location: [refrigerator] }
+  kitchen_coffee:   { taxonomy_id: 17, match_type: similar, kitchen_location: [shelf] }
+  kitchen_wine:     { taxonomy_id: 18, match_type: similar, kitchen_location: [shelf] }
+
+  # ── Food Items ──────────────────────────────────────────────────────────
+  kitchen_can:      { taxonomy_id: 47, match_type: similar, kitchen_location: [shelf] }
+  kitchen_ketchup:  { taxonomy_id: 48, match_type: similar, kitchen_location: [refrigerator] }
+  kitchen_mustard:  { taxonomy_id: 49, match_type: similar, kitchen_location: [refrigerator] }
+  kitchen_mayo:     { taxonomy_id: 50, match_type: similar, kitchen_location: [refrigerator] }
+  kitchen_soup:     { taxonomy_id: 54, match_type: similar, kitchen_location: [shelf] }
+  kitchen_pasta:    { taxonomy_id: 59, match_type: similar, kitchen_location: [shelf] }
+  kitchen_sauce:    { taxonomy_id: 60, match_type: similar, kitchen_location: [shelf] }
+  kitchen_cereal:   { taxonomy_id: 84, match_type: similar, kitchen_location: [shelf] }
+
+  # ── Cleaning ────────────────────────────────────────────────────────────
+  kitchen_sponge:   { taxonomy_id: 63, match_type: exact, kitchen_location: [sink] }
+  kitchen_cleanser: { taxonomy_id: 67, match_type: similar, kitchen_location: [sink] }
+  kitchen_soap:     { taxonomy_id: 65, match_type: similar, kitchen_location: [sink] }
+  kitchen_spray:    { taxonomy_id: 71, match_type: similar, kitchen_location: [shelf] }
+
+  # ── Containers ──────────────────────────────────────────────────────────
+  kitchen_jar:      { taxonomy_id: 97, match_type: similar, kitchen_location: [shelf] }
+  kitchen_box:      { taxonomy_id: 100, match_type: similar, kitchen_location: [shelf] }
+
+# ── Dataset value proposition ─────────────────────────────────────────────
+value:
+  total_kitchen_objects: 111
+  mapped_to_taxonomy: 26
+  unique_feature: "Humanoid egocentric RGB-D with 6D pose annotations"
+  kitchen_locations:
+    - shelf (upper/lower)
+    - refrigerator
+    - dishwasher
+    - oven
+    - microwave
+    - sink
+    - drawer
+  annotation_types:
+    - 2d_bounding_box
+    - 2d_segmentation_mask
+    - 6d_object_pose
+  annotation_pipeline: "BlenderProc2 → YOLOv5 → SAM → MegaPose (iterative)"

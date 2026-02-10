@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this object taxonomy, please cite it as below."
+title: "INHA-RBY1 Object Taxonomy for RoboCup@Home Service Robots"
+type: dataset
+authors:
+  - name: "Inha-United"
+    website: "https://inha-united.github.io/Home2026/"
+repository-code: "https://github.com/inha-united-athome/inha-rby1-dataset"
+url: "https://inha-united-athome.github.io/inha-rby1-dataset/"
+license: CC-BY-4.0
+date-released: "2026-02-10"
+keywords:
+  - robocup-at-home
+  - object-dataset
+  - service-robot
+  - rb-y1
+  - 6d-pose-estimation
+  - object-taxonomy

@@ -37,4 +37,5 @@ extra_css:
     - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 
 nav:
-    - 'index.md'
+    - Home: 'index.md'
+    - Object Dataset: 'object_dataset.md'

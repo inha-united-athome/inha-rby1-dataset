@@ -1,0 +1,10 @@
+# Cleaning Supplies — Category Definition
+category: cleaning_supplies
+display_name: "Cleaning Supplies"
+predefined_location: "dishwasher / shelf"
+rulebook_mandatory: false
+notes: "Colgate toothpaste box is mandatory (worldwide common object). Sponge has highest reuse across years."
+competition_history:
+  2023: [sponge, cleanser]
+  2024: [sponge, soap, cloth, dishwasher_tab]
+  2025: [sponge, cloth, brush, polish, dishwasher_tab]

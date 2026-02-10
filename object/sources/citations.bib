@@ -1,0 +1,286 @@
+% =============================================================================
+%  INHA-RBY1 Object Dataset — Source Citations
+%  All external datasets referenced in this project.
+%  Last updated: 2026-02-10
+% =============================================================================
+
+% ---------------------------------------------------------------------------
+%  1. YCB Object and Model Set
+%     77 objects, 5 categories. 3D meshes, point clouds, RGB-D.
+%     URL: https://www.ycbbenchmarks.com/object-set/
+% ---------------------------------------------------------------------------
+@article{calli2015ycb,
+  title     = {Benchmarking in Manipulation Research: Using the {Yale-CMU-Berkeley}
+               Object and Model Set},
+  author    = {Calli, Berk and Walsman, Aaron and Singh, Arjun and
+               Srinivasa, Siddhartha and Abbeel, Pieter and Dollar, Aaron M.},
+  journal   = {IEEE Robotics \& Automation Magazine},
+  volume    = {22},
+  number    = {3},
+  pages     = {36--52},
+  year      = {2015},
+  publisher = {IEEE},
+  doi       = {10.1109/MRA.2015.2448951}
+}
+
+@inproceedings{calli2015icar,
+  title     = {The {YCB} Object and Model Set: Towards Common Benchmarks for
+               Manipulation Research},
+  author    = {Calli, Berk and Singh, Arjun and Walsman, Aaron and
+               Srinivasa, Siddhartha and Abbeel, Pieter and Dollar, Aaron M.},
+  booktitle = {Proceedings of the 2015 IEEE International Conference on
+               Advanced Robotics (ICAR)},
+  pages     = {510--517},
+  year      = {2015},
+  organization = {IEEE},
+  doi       = {10.1109/ICAR.2015.7251504}
+}
+
+@article{calli2017ycb,
+  title     = {Yale-{CMU}-{Berkeley} dataset for robotic manipulation research},
+  author    = {Calli, Berk and Singh, Arjun and Bruce, James and Walsman, Aaron
+               and Konolige, Kurt and Srinivasa, Siddhartha and Abbeel, Pieter
+               and Dollar, Aaron M.},
+  journal   = {The International Journal of Robotics Research},
+  volume    = {36},
+  number    = {3},
+  pages     = {261--268},
+  year      = {2017},
+  publisher = {SAGE Publications},
+  doi       = {10.1177/0278364917700714}
+}
+
+% ---------------------------------------------------------------------------
+%  2. KITchen — 6D Object Pose Estimation in Kitchen Environments
+%     111 kitchen objects, ~205k real-world RGB-D images,
+%     humanoid egocentric perspective.
+%     URL: https://abdelrahmanyounes.github.io/KITchen/
+% ---------------------------------------------------------------------------
+@inproceedings{younes2024kitchen,
+  title     = {{KITchen}: A Real-World Benchmark and Dataset for {6D} Object
+               Pose Estimation in Kitchen Environments},
+  author    = {Younes, Abdelrahman and Asfour, Tamim},
+  booktitle = {2024 IEEE-RAS 23rd International Conference on Humanoid Robots
+               (Humanoids)},
+  pages     = {803--810},
+  year      = {2024},
+  organization = {IEEE}
+}
+
+% ---------------------------------------------------------------------------
+%  3. HOPE — Household Objects for Pose Estimation
+%     28 toy grocery objects, RGB-D, 6-DoF pose, 3D textured meshes.
+%     URL: https://github.com/swtyree/hope-dataset
+% ---------------------------------------------------------------------------
+@inproceedings{tyree2022hope,
+  title     = {{6-DoF} Pose Estimation of Household Objects for Robotic
+               Manipulation: An Accessible Dataset and Benchmark},
+  author    = {Tyree, Stephen and Tremblay, Jonathan and To, Thang and
+               Cheng, Jia and Mosier, Terry and Smith, Jeffrey and
+               Birchfield, Stan},
+  booktitle = {International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2022}
+}
+
+@inproceedings{lin2021hopevideo,
+  title     = {Multi-view Fusion for Multi-level Robotic Scene Understanding},
+  author    = {Lin, Yunzhi and Tremblay, Jonathan and Tyree, Stephen and
+               Vela, Patricio A. and Birchfield, Stan},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and
+               Systems (IROS)},
+  pages     = {6817--6824},
+  year      = {2021},
+  doi       = {10.1109/IROS51168.2021.9635994}
+}
+
+% ---------------------------------------------------------------------------
+%  4. GraspNet-1Billion
+%     88 objects, 190 scenes, 97,280 images, 1.1B grasp poses.
+%     URL: https://graspnet.net/
+% ---------------------------------------------------------------------------
+@inproceedings{fang2020graspnet,
+  title     = {{GraspNet-1Billion}: A Large-Scale Benchmark for General Object
+               Grasping},
+  author    = {Fang, Hao-Shu and Wang, Chenxi and Gou, Minghao and Lu, Cewu},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and
+               Pattern Recognition (CVPR)},
+  pages     = {11444--11453},
+  year      = {2020}
+}
+
+@article{fang2023graspnet,
+  title     = {Robust Grasping Across Diverse Sensor Qualities: The
+               {GraspNet-1Billion} Dataset},
+  author    = {Fang, Hao-Shu and Gou, Minghao and Wang, Chenxi and Lu, Cewu},
+  journal   = {The International Journal of Robotics Research},
+  year      = {2023},
+  publisher = {SAGE Publications}
+}
+
+% ---------------------------------------------------------------------------
+%  5. DexYCB — Hand Grasping of Objects
+%     20 YCB objects, 10 subjects, 1000 sequences, hand+object pose.
+%     URL: https://dex-ycb.github.io/
+% ---------------------------------------------------------------------------
+@inproceedings{chao2021dexycb,
+  title     = {{DexYCB}: A Benchmark for Capturing Hand Grasping of Objects},
+  author    = {Chao, Yu-Wei and Yang, Wei and Xiang, Yu and Molchanov, Pavlo
+               and Handa, Ankur and Tremblay, Jonathan and Narang, Yashraj S.
+               and Van Wyk, Karl and Iqbal, Umar and Birchfield, Stan
+               and Kautz, Jan and Fox, Dieter},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition
+               (CVPR)},
+  year      = {2021}
+}
+
+% ---------------------------------------------------------------------------
+%  6. Open Images V7
+%     ~9M images, 600 boxable classes, 16M bounding boxes,
+%     2.8M segmentation masks, 350 segmentation classes.
+%     URL: https://storage.googleapis.com/openimages/web/index.html
+% ---------------------------------------------------------------------------
+@article{kuznetsova2020openimages,
+  title     = {The {Open Images} Dataset {V4}: Unified Image Classification,
+               Object Detection, and Visual Relationship Detection at Scale},
+  author    = {Kuznetsova, Alina and Rom, Hassan and Alldrin, Neil and
+               Uijlings, Jasper and Krasin, Ivan and Pont-Tuset, Jordi and
+               Kamali, Shahab and Popov, Stefan and Malloci, Matteo and
+               Kolesnikov, Alexander and Duerig, Tom and Ferrari, Vittorio},
+  journal   = {International Journal of Computer Vision (IJCV)},
+  volume    = {128},
+  pages     = {1956--1981},
+  year      = {2020},
+  doi       = {10.1007/s11263-020-01316-z}
+}
+
+% ---------------------------------------------------------------------------
+%  7. BOP — Benchmark for 6D Object Pose Estimation
+%     Unified benchmark including YCB-V, T-LESS, HOPE, etc.
+%     URL: https://bop.felk.cvut.cz/
+% ---------------------------------------------------------------------------
+@inproceedings{hodan2018bop,
+  title     = {{BOP}: Benchmark for {6D} Object Pose Estimation},
+  author    = {Hod{\'a}{\v{n}}, Tom{\'a}{\v{s}} and Michel, Frank and
+               Brachmann, Eric and Kehl, Wadim and Buch, Anders Glent and
+               Kraft, Dirk and Drost, Bertram and Vidal, Joel and
+               Ihrke, Stephan and Zabulis, Xenophon and others},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages     = {19--34},
+  year      = {2018}
+}
+
+@article{hodan2024bop,
+  title     = {{BOP} Challenge 2024 on Detection, Segmentation and Pose
+               Estimation of Seen and Unseen Rigid Objects},
+  author    = {Hod{\'a}{\v{n}}, Tom{\'a}{\v{s}} and Sundermeyer, Martin and
+               Denninger, Maximilian and others},
+  journal   = {arXiv preprint arXiv:2404.19221},
+  year      = {2024}
+}
+
+% ---------------------------------------------------------------------------
+%  8. ACRONYM — Large-Scale Grasp Dataset
+%      8,872 objects from ShapeNet, 17.7M grasp annotations.
+%      URL: https://github.com/NVlabs/acronym
+% ---------------------------------------------------------------------------
+@inproceedings{eppner2021acronym,
+  title     = {{ACRONYM}: A Large-Scale Grasp Dataset},
+  author    = {Eppner, Clemens and Mousavian, Arsalan and Fox, Dieter},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {6222--6227},
+  year      = {2021}
+}
+
+% ---------------------------------------------------------------------------
+%  9. ShapeNet
+%      ~51k 3D models across 55 categories.
+%      URL: https://shapenet.org/
+% ---------------------------------------------------------------------------
+@techreport{chang2015shapenet,
+  title       = {{ShapeNet}: An Information-Rich {3D} Model Repository},
+  author      = {Chang, Angel X. and Funkhouser, Thomas and Guibas, Leonidas
+                 and Hanrahan, Pat and Huang, Qixing and Li, Zimo and
+                 Savarese, Silvio and Savva, Manolis and Song, Shuran and
+                 Su, Hao and Xiao, Jianxiong and Yi, Li and Yu, Fisher},
+  number      = {arXiv:1512.03012},
+  institution = {Stanford University --- Princeton University --- Toyota
+                 Technological Institute at Chicago},
+  year        = {2015}
+}
+
+% ---------------------------------------------------------------------------
+%  10. Google Scanned Objects
+%      ~1k high-quality 3D scanned household objects.
+%      URL: https://research.google/resources/datasets/scanned-objects-google-research/
+% ---------------------------------------------------------------------------
+@inproceedings{downs2022google,
+  title     = {Google Scanned Objects: A High-Quality Dataset of {3D} Scanned
+               Household Items},
+  author    = {Downs, Laura and Francis, Anthony and Koenig, Nate and
+               Kinber, Brandon and Hickman, Ryan and Reymann, Krista and
+               McHugh, Thomas B. and Vanhoucke, Vincent},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {2553--2560},
+  year      = {2022}
+}
+
+% ---------------------------------------------------------------------------
+%  11. OCID
+%      Tabletop objects in cluttered indoor scenes, RGB-D + segmentation.
+%      URL: https://www.acin.tuwien.ac.at/en/vision-for-robotics/software-tools/object-clutter-indoor-dataset/
+% ---------------------------------------------------------------------------
+@inproceedings{suchi2019ocid,
+  title     = {{EasyLabel}: A Semi-Automatic Pixel-wise Object Annotation Tool
+               for Creating Robotic {RGB-D} Datasets},
+  author    = {Suchi, Markus and Patten, Timothy and Fischinger, David and
+               Vincze, Markus},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {6678--6684},
+  year      = {2019}
+}
+
+% ---------------------------------------------------------------------------
+%  12. RoboCup@Home Rulebook (Object Definitions)
+%      Competition framework: minimum 30 objects, categories, attributes.
+%      URL: https://athome.robocup.org/
+% ---------------------------------------------------------------------------
+@misc{robocupathome2025,
+  title        = {{RoboCup@Home} Rules and Regulations},
+  author       = {{RoboCup @Home Technical Committee}},
+  year         = {2025},
+  howpublished = {\url{https://github.com/RoboCupAtHome/RuleBook}},
+  note         = {Accessed: 2026-02-10}
+}
+
+% ---------------------------------------------------------------------------
+%  13. Dex-Net — Deep Learning for Robust Grasping
+%      Synthetic point cloud + analytic grasp quality dataset.
+%      URL: https://berkeleyautomation.github.io/dex-net/
+% ---------------------------------------------------------------------------
+@inproceedings{mahler2017dexnet2,
+  title     = {{Dex-Net 2.0}: Deep Learning to Plan Robust Grasps with
+               Synthetic Point Clouds and Analytic Grasp Metrics},
+  author    = {Mahler, Jeffrey and Liang, Jacky and Niyaz, Sherdil and
+               Laskey, Michael and Doan, Richard and Liu, Xinyu and
+               Ojea, Juan Aparicio and Goldberg, Ken},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2017}
+}
+
+% ---------------------------------------------------------------------------
+%  14. OmniObject3D
+%     6,000 scanned objects in 190 categories, real-scanned 3D.
+%     URL: https://omniobject3d.github.io/
+% ---------------------------------------------------------------------------
+@inproceedings{wu2023omniobject3d,
+  title     = {{OmniObject3D}: Large-Vocabulary {3D} Object Dataset for
+               Realistic Perception, Reconstruction and Generation},
+  author    = {Wu, Tong and Zhang, Jiarui and Fu, Xiao and Wang, Yuxin and
+               Ren, Jiawei and Pan, Liang and Wu, Wayne and Yang, Lei and
+               Wang, Jiaqi and Qian, Chen and Lin, Dahua and Liu, Ziwei},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition
+               (CVPR)},
+  pages     = {803--814},
+  year      = {2023}
+}
+
