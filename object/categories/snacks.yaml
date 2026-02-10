@@ -1,0 +1,10 @@
+# Snacks — Category Definition
+category: snacks
+display_name: "Snacks"
+predefined_location: "side table / shelf"
+rulebook_mandatory: false
+notes: "Pringles red can is mandatory per rulebook (worldwide common object)."
+competition_history:
+  2023: [pringles, cornflakes, crackers]
+  2024: [pringles, cornflakes, chips, candy, tic_tac]
+  2025: [pringles, cornflakes, chips, chocolate_bar, peanuts, gum_balls, cheese_snack]

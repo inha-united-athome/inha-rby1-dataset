@@ -1,0 +1,977 @@
+# =============================================================================
+#  INHA-RBY1 Object Taxonomy
+#  Curated from RoboCup@Home competition history (2023–2025) & rulebook.
+#
+#  Fields:
+#    id              : unique integer (auto-increment)
+#    name            : canonical snake_case name
+#    display_name    : human-readable label
+#    category        : one of 9 categories
+#    subcategory     : finer grouping (optional)
+#    appearances     : competition years where the object appeared (2023-2025)
+#    rulebook_req    : whether the rulebook mandates this type (true/false)
+#    ycb_id          : YCB object-set ID if available (null otherwise)
+#    source_datasets : public datasets containing this object
+# =============================================================================
+
+version: "0.1.0"
+created: "2026-02-10"
+# total_objects is derived from len(objects)
+
+categories:
+  - dishes
+  - drinks
+  - fruits
+  - snacks
+  - foods
+  - cleaning_supplies
+  - toys
+  - task_specific
+  - household
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  DISHES
+# ─────────────────────────────────────────────────────────────────────────────
+objects:
+
+  - id: 1
+    name: bowl
+    display_name: Bowl
+    category: dishes
+    subcategory: tableware
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "024_bowl"
+    source_datasets: [ycb, hope, graspnet, kitchen, open_images, bop]
+
+  - id: 2
+    name: plate
+    display_name: Plate
+    category: dishes
+    subcategory: tableware
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "029_plate"
+    source_datasets: [ycb, hope, kitchen, open_images]
+
+  - id: 3
+    name: cup
+    display_name: Cup / Mug
+    category: dishes
+    subcategory: tableware
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "025_mug"
+    source_datasets: [ycb, hope, graspnet, kitchen, open_images, bop]
+
+  - id: 4
+    name: fork
+    display_name: Fork
+    category: dishes
+    subcategory: cutlery
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "030_fork"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 5
+    name: knife
+    display_name: Knife
+    category: dishes
+    subcategory: cutlery
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "032_knife"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 6
+    name: spoon
+    display_name: Spoon
+    category: dishes
+    subcategory: cutlery
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true
+    ycb_id: "031_spoon"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 7
+    name: napkin
+    display_name: Napkin
+    category: dishes
+    subcategory: tableware
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 8
+    name: glass
+    display_name: Glass
+    category: dishes
+    subcategory: tableware
+    appearances: []
+    rulebook_req: false
+    ycb_id: "023_wine_glass"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 9
+    name: tray
+    display_name: Tray
+    category: dishes
+    subcategory: tableware
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 10
+    name: chopsticks
+    display_name: Chopsticks
+    category: dishes
+    subcategory: cutlery
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  DRINKS
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 11
+    name: coke
+    display_name: Coke / Cola
+    category: drinks
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images, google_scanned_objects]
+
+  - id: 12
+    name: milk
+    display_name: Milk (carton)
+    category: drinks
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, hope, open_images]
+
+  - id: 13
+    name: orange_juice
+    display_name: Orange Juice
+    category: drinks
+    appearances: [2023, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 14
+    name: fanta
+    display_name: Fanta
+    category: drinks
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 15
+    name: iced_tea
+    display_name: Iced Tea
+    category: drinks
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 16
+    name: water_bottle
+    display_name: Water Bottle
+    category: drinks
+    appearances: [2024]
+    rulebook_req: false
+    ycb_id: "021_bleach_cleanser"  # shape-similar bottle
+    source_datasets: [ycb, kitchen, open_images, google_scanned_objects]
+
+  - id: 17
+    name: coffee
+    display_name: Coffee (jar/can)
+    category: drinks
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: "002_master_chef_can"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 18
+    name: red_wine
+    display_name: Red Wine (bottle)
+    category: drinks
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 19
+    name: green_tea
+    display_name: Green Tea
+    category: drinks
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 20
+    name: beer
+    display_name: Beer (can/bottle)
+    category: drinks
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, kitchen]
+
+  - id: 21
+    name: red_bull
+    display_name: Red Bull Can
+    category: drinks
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 22
+    name: juice_pack
+    display_name: Juice Pack
+    category: drinks
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  FRUITS
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 23
+    name: apple
+    display_name: Apple
+    category: fruits
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: "013_apple"
+    source_datasets: [ycb, hope, graspnet, kitchen, open_images, dexycb, bop]
+
+  - id: 24
+    name: pear
+    display_name: Pear
+    category: fruits
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: "016_pear"
+    source_datasets: [ycb, hope, kitchen, open_images, bop]
+
+  - id: 25
+    name: lemon
+    display_name: Lemon
+    category: fruits
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: "014_lemon"
+    source_datasets: [ycb, hope, kitchen, open_images, bop]
+
+  - id: 26
+    name: orange
+    display_name: Orange
+    category: fruits
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: "017_orange"
+    source_datasets: [ycb, hope, kitchen, open_images, bop]
+
+  - id: 27
+    name: banana
+    display_name: Banana
+    category: fruits
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: "011_banana"
+    source_datasets: [ycb, hope, kitchen, open_images, dexycb, bop]
+
+  - id: 28
+    name: strawberry
+    display_name: Strawberry
+    category: fruits
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: "012_strawberry"
+    source_datasets: [ycb, hope, open_images, bop]
+
+  - id: 29
+    name: peach
+    display_name: Peach
+    category: fruits
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: "015_peach"
+    source_datasets: [ycb, hope, open_images, bop]
+
+  - id: 30
+    name: plum
+    display_name: Plum
+    category: fruits
+    appearances: [2023, 2024]
+    rulebook_req: false
+    ycb_id: "018_plum"
+    source_datasets: [ycb, hope, open_images, bop]
+
+  - id: 31
+    name: tangerine
+    display_name: Tangerine
+    category: fruits
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 32
+    name: lime
+    display_name: Lime
+    category: fruits
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 33
+    name: grape
+    display_name: Grape (bunch)
+    category: fruits
+    appearances: []
+    rulebook_req: false
+    ycb_id: "019_pitcher_base"  # no direct match
+    source_datasets: [open_images]
+
+  - id: 34
+    name: mango
+    display_name: Mango
+    category: fruits
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  SNACKS
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 35
+    name: pringles
+    display_name: Pringles Can (red)
+    category: snacks
+    appearances: [2023, 2024, 2025]
+    rulebook_req: true  # worldwide common object
+    ycb_id: "003_cracker_box"  # similar shape category
+    source_datasets: [kitchen, open_images, google_scanned_objects]
+
+  - id: 36
+    name: cornflakes
+    display_name: Cornflakes Box
+    category: snacks
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: "003_cracker_box"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 37
+    name: chips
+    display_name: Chips / Crisps
+    category: snacks
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 38
+    name: candy
+    display_name: Candy
+    category: snacks
+    appearances: [2024]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 39
+    name: chocolate_bar
+    display_name: Chocolate Bar
+    category: snacks
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 40
+    name: peanuts
+    display_name: Peanuts (container)
+    category: snacks
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 41
+    name: cookies
+    display_name: Cookies / Biscuits
+    category: snacks
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, kitchen]
+
+  - id: 42
+    name: crackers
+    display_name: Crackers (Cheez-It)
+    category: snacks
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "003_cracker_box"
+    source_datasets: [ycb, hope, open_images]
+
+  - id: 43
+    name: gum_balls
+    display_name: Gum Balls / Bubble Gum
+    category: snacks
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 44
+    name: popcorn
+    display_name: Popcorn
+    category: snacks
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 45
+    name: cheese_snack
+    display_name: Cheese Snack
+    category: snacks
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 46
+    name: tic_tac
+    display_name: Tic Tac
+    category: snacks
+    appearances: [2024]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  FOODS / CONDIMENTS
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 47
+    name: tuna_can
+    display_name: Tuna Fish Can
+    category: foods
+    appearances: [2023, 2025]
+    rulebook_req: false
+    ycb_id: "007_tuna_fish_can"
+    source_datasets: [ycb, hope, graspnet, bop, dexycb]
+
+  - id: 48
+    name: ketchup
+    display_name: Ketchup
+    category: foods
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images, google_scanned_objects]
+
+  - id: 49
+    name: mustard
+    display_name: Mustard
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "006_mustard_bottle"
+    source_datasets: [ycb, hope, graspnet, dexycb, bop]
+
+  - id: 50
+    name: mayonnaise
+    display_name: Mayonnaise
+    category: foods
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 51
+    name: sugar
+    display_name: Sugar Box
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "004_sugar_box"
+    source_datasets: [ycb, hope, graspnet, dexycb, bop]
+
+  - id: 52
+    name: salt
+    display_name: Salt
+    category: foods
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 53
+    name: spam
+    display_name: Spam Can
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "010_potted_meat_can"
+    source_datasets: [ycb, hope, graspnet, dexycb, bop]
+
+  - id: 54
+    name: tomato_soup
+    display_name: Tomato Soup Can
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "005_tomato_soup_can"
+    source_datasets: [ycb, hope, graspnet, dexycb, bop]
+
+  - id: 55
+    name: coffee_grounds
+    display_name: Coffee Grounds
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "002_master_chef_can"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 56
+    name: oats
+    display_name: Oats / Oatmeal
+    category: foods
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 57
+    name: broth
+    display_name: Broth
+    category: foods
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 58
+    name: bread
+    display_name: Bread
+    category: foods
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, kitchen]
+
+  - id: 59
+    name: pasta
+    display_name: Pasta / Noodles
+    category: foods
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, kitchen]
+
+  - id: 60
+    name: tomato_sauce
+    display_name: Tomato Sauce
+    category: foods
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 61
+    name: corn_flour
+    display_name: Corn Flour
+    category: foods
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 62
+    name: jello
+    display_name: Gelatin / Jello Box
+    category: foods
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "009_gelatin_box"
+    source_datasets: [ycb, hope, graspnet, dexycb, bop]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  CLEANING SUPPLIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 63
+    name: sponge
+    display_name: Sponge
+    category: cleaning_supplies
+    appearances: [2023, 2024, 2025]
+    rulebook_req: false
+    ycb_id: "026_sponge"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 64
+    name: cloth
+    display_name: Cloth / Washcloth
+    category: cleaning_supplies
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 65
+    name: soap
+    display_name: Soap
+    category: cleaning_supplies
+    appearances: [2024]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 66
+    name: brush
+    display_name: Brush
+    category: cleaning_supplies
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 67
+    name: cleanser
+    display_name: Cleanser / Detergent
+    category: cleaning_supplies
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "021_bleach_cleanser"
+    source_datasets: [ycb, kitchen, open_images]
+
+  - id: 68
+    name: dishwasher_tab
+    display_name: Dishwasher Tab
+    category: cleaning_supplies
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: []
+
+  - id: 69
+    name: shampoo
+    display_name: Shampoo
+    category: cleaning_supplies
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images, google_scanned_objects]
+
+  - id: 70
+    name: toothpaste_colgate
+    display_name: Colgate Toothpaste Box
+    category: cleaning_supplies
+    appearances: []
+    rulebook_req: true  # worldwide common object
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 71
+    name: spray_bottle
+    display_name: Spray Bottle
+    category: cleaning_supplies
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 72
+    name: toilet_paper
+    display_name: Toilet Paper
+    category: cleaning_supplies
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  TOYS
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 73
+    name: rubiks_cube
+    display_name: Rubik's Cube (solved)
+    category: toys
+    appearances: [2023]
+    rulebook_req: true  # worldwide common object
+    ycb_id: "077_rubiks_cube"
+    source_datasets: [ycb, graspnet, bop, open_images]
+
+  - id: 74
+    name: tennis_ball
+    display_name: Tennis Ball
+    category: toys
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "056_tennis_ball"
+    source_datasets: [ycb, open_images, graspnet]
+
+  - id: 75
+    name: soccer_ball
+    display_name: Soccer Ball (mini)
+    category: toys
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "054_softball"
+    source_datasets: [ycb, open_images]
+
+  - id: 76
+    name: baseball
+    display_name: Baseball
+    category: toys
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "055_baseball"
+    source_datasets: [ycb, open_images, graspnet]
+
+  - id: 77
+    name: dice
+    display_name: Dice
+    category: toys
+    appearances: [2023]
+    rulebook_req: false
+    ycb_id: "076_timer"  # no exact match
+    source_datasets: [ycb, open_images]
+
+  - id: 78
+    name: toy_car
+    display_name: Toy Car
+    category: toys
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects, omniobject3d]
+
+  - id: 79
+    name: stuffed_animal
+    display_name: Stuffed Animal
+    category: toys
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 80
+    name: toy_block
+    display_name: Toy Block (Lego/Duplo)
+    category: toys
+    appearances: []
+    rulebook_req: false
+    ycb_id: "073_lego_duplo"
+    source_datasets: [ycb, open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  TASK-SPECIFIC
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 81
+    name: bag
+    display_name: Bag (Carry My Luggage)
+    category: task_specific
+    appearances: [2024, 2025]
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 82
+    name: laundry_basket
+    display_name: Laundry Basket
+    category: task_specific
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 83
+    name: t_shirt
+    display_name: T-Shirt (Doing Laundry)
+    category: task_specific
+    appearances: []
+    rulebook_req: true
+    ycb_id: "074_t_shirt"
+    source_datasets: [ycb]
+
+  - id: 84
+    name: cereal_box
+    display_name: Cereal Box (pourable)
+    category: task_specific
+    appearances: [2023]
+    rulebook_req: true
+    ycb_id: "003_cracker_box"
+    source_datasets: [ycb, hope, kitchen, open_images]
+
+  - id: 85
+    name: chocolate_egg
+    display_name: Chocolate Egg (fragile)
+    category: task_specific
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: []
+
+  - id: 86
+    name: heavy_bottle
+    display_name: Heavy Bottle (1–2.5 kg)
+    category: task_specific
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [kitchen, open_images]
+
+  - id: 87
+    name: cornflakes_container
+    display_name: Cornflakes Container (Storing Groceries)
+    category: task_specific
+    appearances: [2024, 2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: []
+
+  - id: 88
+    name: candle
+    display_name: Candle
+    category: task_specific
+    appearances: [2024]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 89
+    name: polish
+    display_name: Polish
+    category: task_specific
+    appearances: [2025]
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 90
+    name: trash_item
+    display_name: Trash Item (generic)
+    category: task_specific
+    appearances: []
+    rulebook_req: true
+    ycb_id: null
+    source_datasets: [open_images]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  HOUSEHOLD
+# ─────────────────────────────────────────────────────────────────────────────
+
+  - id: 91
+    name: book
+    display_name: Book
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects, omniobject3d]
+
+  - id: 92
+    name: remote_control
+    display_name: Remote Control
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, omniobject3d]
+
+  - id: 93
+    name: tissue_box
+    display_name: Tissue Box
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images, google_scanned_objects]
+
+  - id: 94
+    name: pen
+    display_name: Pen / Marker
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: "040_large_marker"
+    source_datasets: [ycb, open_images]
+
+  - id: 95
+    name: towel
+    display_name: Towel
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [open_images]
+
+  - id: 96
+    name: bottle
+    display_name: Generic Bottle
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: "021_bleach_cleanser"
+    source_datasets: [ycb, kitchen, open_images, graspnet, google_scanned_objects]
+
+  - id: 97
+    name: jar
+    display_name: Jar
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images, google_scanned_objects]
+
+  - id: 98
+    name: scissors
+    display_name: Scissors
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: "037_scissors"
+    source_datasets: [ycb, open_images]
+
+  - id: 99
+    name: key
+    display_name: Key
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: "049_key"  # padlock keys set
+    source_datasets: [ycb, open_images]
+
+  - id: 100
+    name: plastic_container
+    display_name: Plastic Container
+    category: household
+    appearances: []
+    rulebook_req: false
+    ycb_id: null
+    source_datasets: [kitchen, open_images, google_scanned_objects]

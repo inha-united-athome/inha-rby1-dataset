@@ -1,0 +1,10 @@
+# Drinks — Category Definition
+category: drinks
+display_name: "Drinks"
+predefined_location: "bar / cabinet"
+rulebook_mandatory: false
+notes: "Red Bull is a rulebook-mandated worldwide common object."
+competition_history:
+  2023: [cola, milk, orange_juice, red_wine, iced_tea, juice_pack]
+  2024: [cola, milk, fanta, iced_tea, water_bottle]
+  2025: [coke, milk, orange_juice, fanta, coffee, kuat]

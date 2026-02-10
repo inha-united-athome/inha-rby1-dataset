@@ -1,0 +1,11 @@
+# Fruits — Category Definition
+# Highest YCB overlap. All 8 classic fruits have YCB 3D models.
+category: fruits
+display_name: "Fruits"
+predefined_location: "desk / kitchen counter"
+rulebook_mandatory: false
+ycb_coverage: "10/12 have YCB 3D models"
+competition_history:
+  2023: [apple, pear, lemon, orange, banana, strawberry, peach, plum]
+  2024: [apple, pear, lemon, orange, banana, strawberry, peach, plum]
+  2025: [apple, pear, lemon, tangerine, lime]

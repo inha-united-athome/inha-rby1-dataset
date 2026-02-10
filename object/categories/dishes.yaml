@@ -1,0 +1,10 @@
+# Dishes & Cutlery — Category Definition
+# Rulebook: Tableware (dish, bowl, cup, napkin) + Cutlery (fork, knife, spoon) are MANDATORY.
+category: dishes
+display_name: "Dishes & Cutlery"
+predefined_location: "kitchen table"
+rulebook_mandatory: true
+competition_history:
+  2023: [bowl, plate, cup, fork, knife, spoon]
+  2024: [bowl, plate, cup, fork, knife, spoon]
+  2025: [bowl, plate, cup, fork, knife, spoon]

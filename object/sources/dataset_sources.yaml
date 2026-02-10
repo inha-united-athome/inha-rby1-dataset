@@ -1,0 +1,178 @@
+# =============================================================================
+#  External Dataset Source Registry
+#  Each entry describes a public dataset used for object porting / reference.
+# =============================================================================
+
+datasets:
+
+  # --- 3D Model & Point Cloud Datasets ---
+
+  ycb:
+    full_name: "YCB Object and Model Set"
+    version: "v2"
+    url: "https://www.ycbbenchmarks.com/object-set/"
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/"
+    num_objects: 77
+    categories: ["food", "kitchen", "tool", "shape", "task"]
+    data_types: ["3d_mesh", "point_cloud", "rgb", "rgbd"]
+    license: "Public (research)"
+    cite_key: ["calli2015ycb", "calli2017ycb"]
+    relevance: "RoboCup@Home rulebook explicitly references YCB objects"
+    notes: |
+      Some physical objects have been replaced due to availability.
+      Version tracking: https://docs.google.com/spreadsheets/d/1hFmbu7VhjBV0Z1ofP0MeJcEPYC4U1zc2PfYxRw0S1hw
+
+  kitchen:
+    full_name: "KITchen Dataset"
+    version: "v1"
+    url: "https://abdelrahmanyounes.github.io/KITchen/"
+    download: "https://drive.google.com/drive/folders/1K38tgvQN_yl9MOdF1MlKL9oJVHQyFkyC"
+    code: "https://github.com/AbdelrahmanYounes/KITchen"
+    num_objects: 111
+    num_images: 205000
+    categories: ["kitchen_objects"]
+    data_types: ["rgbd", "6d_pose", "2d_bbox", "segmentation_mask"]
+    robot: "humanoid (egocentric)"
+    license: "Public"
+    cite_key: ["younes2024kitchen"]
+    relevance: "Humanoid egocentric perspective; kitchen environment matches @Home arena"
+    notes: |
+      Semi-automated annotation pipeline using BlenderProc2 + YOLOv5 + SAM + MegaPose.
+      Two distinct kitchen environments captured.
+
+  hope:
+    full_name: "HOPE — Household Objects for Pose Estimation"
+    version: "v1"
+    url: "https://github.com/swtyree/hope-dataset"
+    download: "https://drive.google.com/drive/folders/1Hj5K9RIdcNxBFiU8qG0-oL3Ryd9f2gOY"
+    bop_page: "https://bop.felk.cvut.cz/datasets/#HOPE"
+    num_objects: 28
+    num_images_image: 188  # test + 50 validation
+    num_frames_video: 2038
+    categories: ["toy_grocery"]
+    data_types: ["rgbd", "6d_pose", "3d_mesh"]
+    camera: "RealSense D415"
+    license: "CC BY-NC-SA 4.0"
+    cite_key: ["tyree2022hope", "lin2021hopevideo"]
+    relevance: "Toy grocery items sized for robotic manipulation; BOP benchmark compatible"
+
+  graspnet:
+    full_name: "GraspNet-1Billion"
+    version: "v1"
+    url: "https://graspnet.net/"
+    num_objects: 88
+    num_scenes: 190
+    num_images: 97280
+    num_grasps: 1100000000  # 1.1 Billion
+    cameras: ["Kinect Azure", "RealSense D435"]
+    data_types: ["rgbd", "6d_pose", "grasp_pose", "instance_mask"]
+    license: "Research use"
+    cite_key: ["fang2020graspnet", "fang2023graspnet"]
+    relevance: "Dense grasp annotations; suitable for manipulation planning"
+
+  dexycb:
+    full_name: "DexYCB"
+    version: "v1"
+    url: "https://dex-ycb.github.io/"
+    download: "https://drive.google.com/file/d/18fD8RtWJM_fBi3bsuQTzdjIKxdRYtl57"
+    code: "https://github.com/NVlabs/dex-ycb-toolkit"
+    num_objects: 20  # subset of YCB
+    num_subjects: 10
+    num_sequences: 1000
+    data_types: ["rgbd", "hand_pose", "object_6d_pose"]
+    license: "CC BY-NC 4.0"
+    cite_key: ["chao2021dexycb"]
+    relevance: "Hand-object interaction; useful for handover tasks in @Home"
+
+  open_images:
+    full_name: "Open Images V7"
+    version: "v7"
+    url: "https://storage.googleapis.com/openimages/web/index.html"
+    download: "https://storage.googleapis.com/openimages/web/download_v7.html"
+    num_images: 9000000
+    num_bbox_classes: 600
+    num_bboxes: 16000000
+    num_segmentation_classes: 350
+    num_masks: 2800000
+    data_types: ["rgb", "bbox", "segmentation_mask", "visual_relationship"]
+    license: "CC BY 4.0 (annotations), CC BY 2.0 (images)"
+    cite_key: ["kuznetsova2020openimages"]
+    relevance: "Largest public detection dataset; 2D recognition pre-training"
+
+  # --- Additional Benchmarks ---
+
+  bop:
+    full_name: "BOP — Benchmark for 6D Object Pose Estimation"
+    version: "2024"
+    url: "https://bop.felk.cvut.cz/"
+    includes: ["ycbv", "tless", "hope", "lmo", "itodd", "hb", "icbin", "tudl"]
+    data_types: ["rgbd", "6d_pose", "3d_mesh"]
+    license: "Various (per sub-dataset)"
+    cite_key: ["hodan2018bop", "hodan2024bop"]
+    relevance: "Unified 6D pose benchmark; standardized evaluation protocol"
+
+  acronym:
+    full_name: "ACRONYM — Large-Scale Grasp Dataset"
+    url: "https://github.com/NVlabs/acronym"
+    num_objects: 8872
+    num_grasps: 17700000
+    source_models: "ShapeNet"
+    data_types: ["3d_mesh", "grasp_pose"]
+    license: "Research use"
+    cite_key: ["eppner2021acronym"]
+    relevance: "Massive grasp dataset for sim-to-real transfer"
+
+  shapenet:
+    full_name: "ShapeNet"
+    url: "https://shapenet.org/"
+    num_models: 51300
+    num_categories: 55
+    data_types: ["3d_mesh", "voxel"]
+    license: "Research use"
+    cite_key: ["chang2015shapenet"]
+    relevance: "Large-scale 3D model repository for synthetic data generation"
+
+  google_scanned_objects:
+    full_name: "Google Scanned Objects"
+    url: "https://app.gazebosim.org/GoogleResearch/fuel/collections/Scanned%20Objects%20by%20Google%20Research"
+    num_objects: 1030
+    data_types: ["3d_mesh_hd", "pbr_texture"]
+    license: "CC BY 4.0"
+    cite_key: ["downs2022google"]
+    relevance: "High-quality textured 3D scans of real household objects"
+
+  ocid:
+    full_name: "OCID — Object Clutter Indoor Dataset"
+    url: "https://www.acin.tuwien.ac.at/en/vision-for-robotics/software-tools/object-clutter-indoor-dataset/"
+    data_types: ["rgbd", "segmentation_mask"]
+    license: "Research use"
+    cite_key: ["suchi2019ocid"]
+    relevance: "Tabletop clutter scenes; directly applicable to pick-and-place tasks"
+
+  dexnet:
+    full_name: "Dex-Net"
+    version: "2.0"
+    url: "https://berkeleyautomation.github.io/dex-net/"
+    data_types: ["point_cloud", "grasp_quality"]
+    license: "Research use"
+    cite_key: ["mahler2017dexnet2"]
+    relevance: "Grasp quality CNN; synthetic depth for robust grasping"
+
+  omniobject3d:
+    full_name: "OmniObject3D"
+    url: "https://omniobject3d.github.io/"
+    num_objects: 6000
+    num_categories: 190
+    data_types: ["3d_mesh_scanned", "point_cloud", "multi_view_rgb"]
+    license: "CC BY-NC-SA 4.0"
+    cite_key: ["wu2023omniobject3d"]
+    relevance: "Largest real-scanned 3D object dataset; diverse household categories"
+
+  robocup_athome:
+    full_name: "RoboCup@Home Rulebook"
+    url: "https://github.com/RoboCupAtHome/RuleBook"
+    data_types: ["competition_rules"]
+    license: "GPL-2.0"
+    cite_key: ["robocupathome2025"]
+    relevance: "Competition framework defining object categories and task requirements"
+

@@ -1,0 +1,270 @@
+# =============================================================================
+#  YCB Object Set ↔ INHA-RBY1 Taxonomy Mapping
+#  Maps YCB object IDs to our taxonomy IDs and @Home competition usage.
+#
+#  YCB set: 77 objects in 5 categories
+#  Ref: https://www.ycbbenchmarks.com/object-set/
+#  Data: http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/
+# =============================================================================
+
+source: ycb
+cite_key: [calli2015ycb, calli2017ycb]
+
+# mapping format:
+#   ycb_id  →  taxonomy_id (our id), match_type (exact|similar|shape_only), notes
+
+mappings:
+
+  # ── Food Items ──────────────────────────────────────────────────────────
+  "002_master_chef_can":
+    taxonomy_id: 55   # coffee_grounds
+    match_type: exact
+    ycb_name: "Master Chef Can"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/002_master_chef_can"
+
+  "003_cracker_box":
+    taxonomy_id: 42   # crackers
+    match_type: exact
+    ycb_name: "Cracker Box"
+    ycb_category: food
+    also_maps_to: [36, 84]  # cornflakes, cereal_box (similar shape)
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/003_cracker_box"
+
+  "004_sugar_box":
+    taxonomy_id: 51   # sugar
+    match_type: exact
+    ycb_name: "Sugar Box"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/004_sugar_box"
+
+  "005_tomato_soup_can":
+    taxonomy_id: 54   # tomato_soup
+    match_type: exact
+    ycb_name: "Tomato Soup Can"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/005_tomato_soup_can"
+
+  "006_mustard_bottle":
+    taxonomy_id: 49   # mustard
+    match_type: exact
+    ycb_name: "Mustard Bottle"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/006_mustard_bottle"
+
+  "007_tuna_fish_can":
+    taxonomy_id: 47   # tuna_can
+    match_type: exact
+    ycb_name: "Tuna Fish Can"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/007_tuna_fish_can"
+
+  "008_pudding_box":
+    taxonomy_id: null
+    match_type: shape_only
+    ycb_name: "Pudding Box"
+    ycb_category: food
+    notes: "No direct taxonomy match; similar to jello box shape"
+
+  "009_gelatin_box":
+    taxonomy_id: 62   # jello
+    match_type: exact
+    ycb_name: "Gelatin Box"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/009_gelatin_box"
+
+  "010_potted_meat_can":
+    taxonomy_id: 53   # spam
+    match_type: exact
+    ycb_name: "Potted Meat Can"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/010_potted_meat_can"
+
+  "011_banana":
+    taxonomy_id: 27   # banana
+    match_type: exact
+    ycb_name: "Banana"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/011_banana"
+
+  "012_strawberry":
+    taxonomy_id: 28   # strawberry
+    match_type: exact
+    ycb_name: "Strawberry"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/012_strawberry"
+
+  "013_apple":
+    taxonomy_id: 23   # apple
+    match_type: exact
+    ycb_name: "Apple"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/013_apple"
+
+  "014_lemon":
+    taxonomy_id: 25   # lemon
+    match_type: exact
+    ycb_name: "Lemon"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/014_lemon"
+
+  "015_peach":
+    taxonomy_id: 29   # peach
+    match_type: exact
+    ycb_name: "Peach"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/015_peach"
+
+  "016_pear":
+    taxonomy_id: 24   # pear
+    match_type: exact
+    ycb_name: "Pear"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/016_pear"
+
+  "017_orange":
+    taxonomy_id: 26   # orange
+    match_type: exact
+    ycb_name: "Orange"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/017_orange"
+
+  "018_plum":
+    taxonomy_id: 30   # plum
+    match_type: exact
+    ycb_name: "Plum"
+    ycb_category: food
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/018_plum"
+
+  # ── Kitchen Items ───────────────────────────────────────────────────────
+  "021_bleach_cleanser":
+    taxonomy_id: 67   # cleanser
+    match_type: similar
+    ycb_name: "Bleach Cleanser"
+    ycb_category: kitchen
+    also_maps_to: [96]  # generic bottle
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/021_bleach_cleanser"
+
+  "023_wine_glass":
+    taxonomy_id: 8    # glass
+    match_type: similar
+    ycb_name: "Wine Glass"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/023_wine_glass"
+
+  "024_bowl":
+    taxonomy_id: 1    # bowl
+    match_type: exact
+    ycb_name: "Bowl"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/024_bowl"
+
+  "025_mug":
+    taxonomy_id: 3    # cup
+    match_type: exact
+    ycb_name: "Mug"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/025_mug"
+
+  "026_sponge":
+    taxonomy_id: 63   # sponge
+    match_type: exact
+    ycb_name: "Sponge"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/026_sponge"
+
+  "029_plate":
+    taxonomy_id: 2    # plate
+    match_type: exact
+    ycb_name: "Plate"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/029_plate"
+
+  "030_fork":
+    taxonomy_id: 4    # fork
+    match_type: exact
+    ycb_name: "Fork"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/030_fork"
+
+  "031_spoon":
+    taxonomy_id: 6    # spoon
+    match_type: exact
+    ycb_name: "Spoon"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/031_spoon"
+
+  "032_knife":
+    taxonomy_id: 5    # knife
+    match_type: exact
+    ycb_name: "Knife"
+    ycb_category: kitchen
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/032_knife"
+
+  # ── Tool Items ──────────────────────────────────────────────────────────
+  "037_scissors":
+    taxonomy_id: 98   # scissors
+    match_type: exact
+    ycb_name: "Scissors"
+    ycb_category: tool
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/037_scissors"
+
+  "040_large_marker":
+    taxonomy_id: 94   # pen
+    match_type: similar
+    ycb_name: "Large Marker"
+    ycb_category: tool
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/040_large_marker"
+
+  # ── Shape Items ─────────────────────────────────────────────────────────
+  "054_softball":
+    taxonomy_id: 75   # soccer_ball (shape-similar)
+    match_type: similar
+    ycb_name: "Softball"
+    ycb_category: shape
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/054_softball"
+
+  "055_baseball":
+    taxonomy_id: 76   # baseball
+    match_type: exact
+    ycb_name: "Baseball"
+    ycb_category: shape
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/055_baseball"
+
+  "056_tennis_ball":
+    taxonomy_id: 74   # tennis_ball
+    match_type: exact
+    ycb_name: "Tennis Ball"
+    ycb_category: shape
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/056_tennis_ball"
+
+  # ── Task Items ──────────────────────────────────────────────────────────
+  "073_lego_duplo":
+    taxonomy_id: 80   # toy_block
+    match_type: exact
+    ycb_name: "Lego Duplo"
+    ycb_category: task
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/073_lego_duplo"
+
+  "074_t_shirt":
+    taxonomy_id: 83   # t_shirt
+    match_type: exact
+    ycb_name: "T-Shirt"
+    ycb_category: task
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/074_t_shirt"
+
+  "077_rubiks_cube":
+    taxonomy_id: 73   # rubiks_cube
+    match_type: exact
+    ycb_name: "Rubik's Cube"
+    ycb_category: task
+    download: "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/077_rubiks_cube"
+
+# ── Summary statistics ────────────────────────────────────────────────────
+summary:
+  total_ycb_objects: 77
+  mapped_to_taxonomy: 30
+  exact_matches: 24
+  similar_matches: 4
+  shape_only: 2
+  unmapped: 47  # remaining YCB objects not in our 100 taxonomy
